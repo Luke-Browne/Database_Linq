@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database_Linq", "Database_Linq\Database_Linq.csproj", "{15057803-CB10-4AAB-A2E6-B55A932C54A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15057803-CB10-4AAB-A2E6-B55A932C54A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15057803-CB10-4AAB-A2E6-B55A932C54A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15057803-CB10-4AAB-A2E6-B55A932C54A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15057803-CB10-4AAB-A2E6-B55A932C54A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1C61332-A627-42F6-A2AE-7C97A643AA5E}
+	EndGlobalSection
+EndGlobal
