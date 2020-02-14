@@ -20,9 +20,19 @@ namespace Database_Linq
     /// </summary>
     public partial class MainWindow : Window
     {
+        NORTHWNDEntities db = new NORTHWNDEntities();
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnQueryEx1_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from c in db.Customers
+                        select c.CompanyName;
+
+            lbxCustomersEx1.ItemsSource = query.ToList();
         }
     }
 }
