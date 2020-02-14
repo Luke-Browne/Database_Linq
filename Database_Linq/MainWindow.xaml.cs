@@ -63,5 +63,67 @@ namespace Database_Linq
 
             dgCustomersEx3.ItemsSource = query.ToList().Distinct();
         }
+
+        // Ex4 Product Information
+        private void btnQueryEx4_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from p in db.Products
+                        where p.Category.CategoryName.Equals("Beverages")
+                        orderby p.ProductID descending
+                        select new
+                        {
+                            p.ProductID,
+                            p.ProductName,
+                            p.Category.CategoryName,
+                            p.UnitPrice
+                        };
+
+            ShowProducts(dgCustomersEx4);
+        }
+
+        private void ShowProducts(DataGrid currentGrid)
+        {
+            var query = from p in db.Products
+                        where p.Category.CategoryName.Equals("Beverages")
+                        orderby p.ProductID descending
+                        select new
+                        {
+                            p.ProductID,
+                            p.ProductName,
+                            p.Category.CategoryName,
+                            p.UnitPrice
+                        };
+
+            currentGrid.ItemsSource = query.ToList();
+        }
+
+        // Ex5 Insert Information
+        private void btnQueryEx5_Click(object sender, RoutedEventArgs e)
+        {
+            Product p = new Product()
+            {
+                ProductName = "Kickapoo Jungle Joy Juice",
+                UnitPrice = 12.49m,
+                CategoryID = 1
+            };
+
+            db.Products.Add(p);
+            db.SaveChanges();
+
+            ShowProducts(dgCustomersEx5);
+        }
+
+        // Ex6 Update Product Information
+        private void btnQueryEx6_Click(object sender, RoutedEventArgs e)
+        {
+            Product p1 = (db.Products
+                          .Where(p => p.ProductName.StartsWith("Kick"))
+                          .Select(p => p)).First();
+
+            p1.UnitPrice = 100m;
+
+            db.SaveChanges();
+            ShowProducts(dgCustomersEx6);
+        }
     }
 }

@@ -48,5 +48,44 @@
 
         </TabItem>
 
+        <TabItem Name="Ex4" Header="Ex4" Width="50">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="90*"/>
+                </Grid.RowDefinitions>
+                <Button Name="btnQueryEx4" Content="Query" Height="25" Width="75" Click="btnQueryEx4_Click"/>
+                <DataGrid Name="dgCustomersEx4" Grid.Row="1" Grid.Column="0"/>
+            </Grid>
+
+        </TabItem>
+
+        <TabItem Name="Ex5" Header="Ex5" Width="50">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="90*"/>
+                </Grid.RowDefinitions>
+                <Button Name="btnQueryEx5" Content="Query" Height="25" Width="75" Click="btnQueryEx5_Click"/>
+                <DataGrid Name="dgCustomersEx5" Grid.Row="1" Grid.Column="0"/>
+            </Grid>
+
+        </TabItem>
+
+        <TabItem Name="Ex6" Header="Ex6" Width="50">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="90*"/>
+                </Grid.RowDefinitions>
+                <Button Name="btnQueryEx6" Content="Query" Height="25" Width="75" Click="btnQueryEx6_Click"/>
+                <DataGrid Name="dgCustomersEx6" Grid.Row="1" Grid.Column="0"/>
+            </Grid>
+
+        </TabItem>
+
     </TabControl>
 </Window>
